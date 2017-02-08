@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--如果用到了alertDialog的提示框 要用这个主题 否则默认的提示框会有一块白色的背景块  如果是MyTheme.NoActionBar 这个主题就会有白色的背景块-->
+    <style name="AllTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/BgBlueColor</item>
+        <item name="colorPrimaryDark">@color/BgBlueColor</item>
+        <item name="colorAccent">@color/BgBlueColor</item>
+        <!--加上这两个属性 标题栏和状态栏都不会有 ，状态栏就是默认的黑色-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+</resources>
